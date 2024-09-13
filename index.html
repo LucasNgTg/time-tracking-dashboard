@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+
+
+  <!-- Rubik -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+    rel="stylesheet">
+
+  <!-- reset styles -->
+  <link rel="stylesheet" href="./src/css/reset.css">
+
+  <!-- apply custom styles -->
+  <link rel="stylesheet" href="./src/css/styles.css">
+
+  <!-- responsive -->
+  <link rel="stylesheet" href="./src/css/responsive.css">
+
+</head>
+
+<body>
+  <main>
+    <div class="user">
+      <div class="user__inner">
+        <h1 class="user__title">
+          Report for
+          <span class="user__name">Jeremy Robson</span>
+        </h1>
+        <img src="./images/image-jeremy.png" alt="Jeremy Robson" class="user__img">
+      </div>
+      <ul class="time-frames">
+        <li>
+          <input type="radio" name="time-frame" id="daily" value="daily">
+          <label for="daily" class="time-frame">Daily</label>
+        </li>
+        <li>
+          <input type="radio" name="time-frame" id="weekly" value="weekly" checked>
+          <label for="weekly" class="time-frame">Weekly</label>
+        </li>
+        <li>
+          <input type="radio" name="time-frame" id="monthly" value="monthly">
+          <label for="monthly" class="time-frame">Monthly</label>
+        </li>
+      </ul>
+    </div>
+
+  </main>
+
+  <footer class="attribution">
+    <span>Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    </span>
+    <span>Coded by <a href="https://github.com/LucasNgTg">LucasNgTg</a>.</span>
+  </footer>
+
+  <template data-card-template>
+    <div class="card" data-activity>
+      <div class="card__inner">
+        <h2 class="card__title" data-title></h2>
+        <h3 class="card__time"><span data-current-time></span>hrs</h3>
+
+        <button class="btn-settings">
+          <img src="./images/icon-ellipsis.svg" alt="ellipsis">
+        </button>
+
+        <h4 class="previous-time">
+          <span class="previous-time__attribute" data-attribute></span>
+          <span class="previous-time__unit" data-timeframe></span>
+          -
+          <span class="previous-time__amount" data-previous-time></span>
+          hrs
+        </h4>
+      </div>
+    </div>
+  </template>
+
+  <script src="./src/js/index.js" type="module"></script>
+</body>
+
+</html>

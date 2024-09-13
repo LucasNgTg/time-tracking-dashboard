@@ -1,0 +1,76 @@
+@media(min-width: 1024px) {
+    :root {
+        --font-size-xl: 3rem;
+        --font-size-lg: 2.5rem;
+        --animation: SlideRight;
+    }
+
+    main {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 15rem);
+        gap: 2rem;
+        max-width: 75rem;
+        place-content: center;
+        margin: auto;
+    }
+
+    .user {
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        display: grid;
+    }
+
+    .user__inner {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: min-content 1fr;
+        gap: 3rem;
+    }
+
+    .user__img {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+        width: 5rem;
+        align-self: start;
+    }
+
+    .user__title {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+        align-self: start;
+    }
+
+    .user__name {
+        line-height: 1.25;
+    }
+
+    .time-frames {
+        flex-direction: column;
+        padding: 2rem;
+    }
+
+    .time-frame {
+        font-size: 1rem;
+    }
+
+    .card {
+        max-height: 80%;
+    }
+
+    .card__inner {
+        grid-template-rows: min-content 1fr min-content min-content;
+        padding: 2rem;
+        height: 131%;
+    }
+
+    .card__time {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+        line-height: 1.5;
+    }
+
+    .previous-time {
+        grid-column: 1 / 3;
+        grid-row: 4 / 5;
+        justify-self: left;
+    }
+}
